@@ -1,0 +1,514 @@
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Work Sans';
+}
+
+@media (max-width: 762px) {
+  body {
+    width: 100vw;
+  }
+}
+
+#deployedMenu {
+  z-index: 1000;
+  position: fixed;
+  margin-left: 100vw;
+  width: 60vw;
+  height: 100vh;
+  background-color: #1B212C;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  padding-top: 20vh;
+  font-size: 20px;
+  gap: 40px;
+}
+
+#deployedMenu a {
+  color: white;
+  text-decoration: none;
+}
+
+#deployedMenu #close {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+}
+
+@keyframes openMenu {
+  0% {
+    margin-left: 100vw;
+  }
+  100% {
+    margin-left: 40vw;
+  }
+}
+
+@keyframes closeMenu {
+  0% {
+    margin-left: 40vw;
+  }
+  100% {
+    margin-left: 100vw;
+  }
+}
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("./img/photo.jpg");
+}
+
+@media (max-width: 762px) {
+  .landing {
+    height: 60vh;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media (min-width: 762px) {
+  .landing {
+    height: 90vh;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+  }
+  .landing .landingContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    width: 60%;
+  }
+  .landing .landingContent p {
+    font-size: 15px;
+    width: 60%;
+  }
+}
+
+.landing header {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  backdrop-filter: blur(2px);
+}
+
+@media (max-width: 762px) {
+  .landing header {
+    height: 100px;
+  }
+}
+
+@media (min-width: 762px) {
+  .landing header {
+    height: 80px;
+  }
+  .landing header .logo {
+    width: 200px;
+  }
+  .landing header nav {
+    text-align: center;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .landing header nav a {
+    text-decoration: none;
+    color: white;
+  }
+  .landing header nav a:hover {
+    text-decoration: underline;
+  }
+  .landing header nav .button {
+    display: flex;
+    align-items: center;
+  }
+  .landing header nav .button:hover {
+    border: 0;
+  }
+}
+
+@media (max-width: 762px) {
+  .landing header #navForPc {
+    display: none;
+  }
+}
+
+@media (max-width: 762px) {
+  .landing header img {
+    width: 55%;
+    height: 80%;
+  }
+}
+
+.landing header .menuBurger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40px;
+  height: 25px;
+}
+
+@media (min-width: 762px) {
+  .landing header .menuBurger {
+    display: none;
+  }
+}
+
+.landing header .menuBurger span {
+  height: 5px;
+  width: 100%;
+  border-radius: 5px;
+  background-color: white;
+  color: white;
+}
+
+.landing .landingContent {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 762px) {
+  .landing .landingContent {
+    margin-top: 10%;
+    margin-bottom: 100px;
+    height: 60%;
+  }
+}
+
+.landing .landingContent h1 {
+  font-size: 45px;
+  font-family: "Abril Fatface";
+}
+
+.landing .landingContent p {
+  font-size: 25px;
+}
+
+@media (max-width: 762px) {
+  .landing .landingContent {
+    width: 90%;
+  }
+}
+
+#concept {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 762px) {
+  #concept {
+    width: 85%;
+    padding-left: 7.5%;
+    padding-right: 7.5%;
+  }
+}
+
+#concept h2 {
+  font-family: "Abril Fatface";
+  margin: 30px;
+  font-size: 25px;
+  text-align: center;
+}
+
+#concept .containSignText {
+  display: flex;
+}
+
+@media (max-width: 762px) {
+  #concept .containSignText {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 762px) {
+  #concept .containSignText {
+    width: 65%;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+#concept .containSignText #sign {
+  width: 300px;
+  border: solid black 1px;
+  padding: 15px;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Abril Fatface';
+  box-shadow: 10px 10px black;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+@media (min-width: 762px) {
+  #concept .containSignText #sign {
+    width: 600px;
+  }
+}
+
+#concept .conceptContainer {
+  margin-bottom: 100px;
+  display: flex;
+}
+
+@media (max-width: 762px) {
+  #concept .conceptContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+}
+
+@media (min-width: 762px) {
+  #concept .conceptContainer {
+    align-items: center;
+    justify-content: space-around;
+    gap: 50px;
+  }
+}
+
+#concept .conceptContainer .card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  gap: 20px;
+}
+
+#concept .conceptContainer .card img {
+  width: 30%;
+}
+
+.aboutUs {
+  width: 100vw;
+  position: relative;
+  display: flex;
+}
+
+.aboutUs #fonda1 {
+  position: absolute;
+  width: 120px;
+  left: 25%;
+  top: -50px;
+}
+
+.aboutUs #fonda2 {
+  position: absolute;
+  width: 120px;
+  left: 45%;
+  top: 40px;
+}
+
+@media (max-width: 762px) {
+  .aboutUs {
+    height: 90vh;
+  }
+  .aboutUs .aboutUsLeft {
+    display: none;
+  }
+}
+
+.aboutUs .aboutUsContent {
+  padding-top: 100px;
+  padding-left: 7%;
+  padding-right: 7%;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 50px;
+  background-color: black;
+  color: white;
+}
+
+.aboutUs .aboutUsContent h2 {
+  font-family: 'Abril Fatface';
+}
+
+@media (min-width: 762px) {
+  .aboutUs {
+    height: 600px;
+  }
+  .aboutUs .aboutUsLeft {
+    width: 50%;
+  }
+  .aboutUs .aboutUsLeft .aboutUsContent {
+    width: 50%;
+  }
+  .aboutUs #fonda1 {
+    position: absolute;
+    width: 120px;
+    left: 35%;
+    top: -50px;
+  }
+  .aboutUs #fonda2 {
+    position: absolute;
+    width: 120px;
+    left: 43%;
+    top: 40px;
+  }
+}
+
+#bookSection {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  max-width: 90%;
+  height: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: black;
+  color: white;
+  border: 0;
+  letter-spacing: 2px;
+  text-align: center;
+  transition: 0.2s;
+}
+
+.button:hover {
+  transition: 0.5s;
+  border: solid black 2px;
+  color: black !important;
+  background-color: white;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  gap: 50px;
+}
+
+@media (min-width: 762px) {
+  footer {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+footer div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 300px;
+}
+
+footer div h2 {
+  font-family: 'Abril Fatface';
+}
+
+footer div img {
+  width: 200px;
+}
+
+footer div a {
+  text-decoration: none;
+  color: white;
+}
+
+footer div .socialMedia {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+footer div .socialMedia img {
+  width: 50px;
+}
+
+form {
+  display: flex;
+  position: fixed;
+  z-index: 1100;
+  background-color: white;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+  padding-top: 10px;
+  height: 100vh;
+  margin-top: 100vh;
+}
+
+form h2 {
+  font-family: 'Abril Fatface';
+}
+
+form input {
+  width: 70%;
+  border: 0;
+  border-bottom: solid black 3px;
+}
+
+form .button {
+  width: 200px;
+}
+
+form a {
+  color: gray;
+}
+
+form .range {
+  width: 100%;
+}
+
+@media (min-width: 762px) {
+  form {
+    gap: 10px;
+    margin-left: 15%;
+    height: 95vh;
+  }
+  form .txt {
+    max-width: 80%;
+  }
+}
+
+@keyframes openForm {
+  0% {
+    margin-top: 100vh;
+  }
+  100% {
+    margin-top: 0vh;
+  }
+}
+
+@keyframes closeForm {
+  0% {
+    margin-top: 0vh;
+  }
+  100% {
+    margin-top: 100vh;
+  }
+}

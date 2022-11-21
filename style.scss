@@ -1,0 +1,457 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Work Sans';
+    @media (max-width: 762px) {
+        width: 100vw;
+    }
+
+}
+
+// menu pour le format mobile qui sort au clic sur le burger (animations activés avec du js)
+#deployedMenu{
+    z-index: 1000;
+    position: fixed;
+    margin-left: 100vw;
+    width: 60vw;
+    height: 100vh;
+    background-color: #1B212C;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color:white;
+    padding-top: 20vh;
+    font-size: 20px;
+    gap: 40px;
+    a{
+        color: white;
+        text-decoration: none;
+    }
+    #close{
+        width: 30px;
+        height: 30px;
+        background-color: white;
+
+    }
+}
+@keyframes openMenu {
+    0% {
+        margin-left: 100vw;
+    }
+    100% {
+        margin-left: 40vw;
+    }
+  }
+
+@keyframes closeMenu {
+    0% {
+        margin-left: 40vw;
+    }
+    100% {
+        margin-left: 100vw;
+    }
+  }
+
+.landing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (max-width: 762px) {
+        height: 60vh;
+        background-position: center;
+        background-size: cover;
+
+    }
+    @media (min-width: 762px) {
+        height: 90vh;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        .landingContent{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+            width: 60%;
+            p{
+                font-size: 15px;
+                width: 60%;
+            }
+        }
+    }
+    background-image: url('./img/photo.jpg');
+    header{
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 5%;
+        padding-right: 5%;
+        backdrop-filter: blur(2px);
+        @media (max-width: 762px) {
+            height: 100px;
+
+        }
+        @media (min-width: 762px) {
+            .logo{
+                width: 200px;
+            }
+            height: 80px;
+            nav{
+                
+                text-align: center;
+                width: 40%;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                a{
+                    text-decoration: none;
+                    color: white;
+
+                    &:hover{
+                        text-decoration: underline;
+
+                    }
+                }
+                .button{
+                    display: flex;
+                    align-items: center;
+                    &:hover{
+                        border: 0;
+                    }
+                }
+            }
+
+        }
+        
+        #navForPc{
+            @media (max-width: 762px) {
+                display: none;
+            }
+
+        }
+        img{
+            @media (max-width: 762px) {
+                width: 55%;
+                height: 80%;
+            }
+        }
+        .menuBurger{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            @media (min-width: 762px) {
+                display: none;
+            }
+            width: 40px;
+            height: 25px;
+            span{
+                height: 5px;
+                width: 100%;
+                border-radius: 5px;
+                background-color: white;
+                color: white;
+            }
+        }
+    }
+
+    .landingContent{
+        @media (max-width: 762px) {
+            margin-top: 10%;
+            margin-bottom: 100px;   
+            height: 60%;
+
+        }
+        background-color: rgba(0, 0, 0, 0.3);
+        color: white;
+        text-align: center;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        h1{
+            font-size: 45px;
+            font-family: "Abril Fatface";
+        }
+        p{
+            font-size: 25px;
+        }
+        @media (max-width: 762px) {
+            width: 90%;
+        }
+        
+        @media (min-width: 762px) {
+            
+        }
+    }
+}
+
+#concept{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    @media (max-width: 762px) {
+        width: 85%;
+        padding-left: 7.5%;
+        padding-right: 7.5%;
+    }
+    h2{
+        font-family: "Abril Fatface";
+        margin: 30px;
+        font-size: 25px;
+        text-align: center;
+    }
+    .containSignText{
+        display: flex;
+        @media (max-width: 762px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        @media (min-width: 762px) {
+            width: 65%;
+            align-items: center;
+            gap: 20px;
+
+        }
+        #sign{
+            @media (min-width: 762px) {
+                width: 600px;
+            }
+            width: 300px;
+            border: solid black 1px;
+            padding : 15px;
+            text-align: center;
+            font-weight: bold;
+            font-family: 'Abril Fatface';
+            box-shadow: 10px 10px black;
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+    }
+
+    .conceptContainer{
+        margin-bottom: 100px;
+        display: flex;
+        @media (max-width: 762px) {
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        @media (min-width: 762px) {
+            align-items: center;
+            justify-content: space-around;
+            gap: 50px;
+        }
+        .card{
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 300px;
+            gap: 20px;
+            img{
+                width: 30%;
+            }
+        }
+    }
+}
+
+.aboutUs{
+    width: 100vw;
+    
+    position: relative;
+    #fonda1{
+        position: absolute;
+        width: 120px;
+        left: 25%;
+        top: -50px;
+
+    }
+    #fonda2{
+        position: absolute;
+        width: 120px;
+        left: 45%;
+        top: 40px;
+
+    }
+    display: flex;
+    @media (max-width: 762px) {
+        height: 90vh;
+        .aboutUsLeft{
+            display: none;
+        }
+    }
+    .aboutUsContent{
+        h2{
+            font-family: 'Abril Fatface';
+        }
+        padding-top: 100px;
+        padding-left: 7%;
+        padding-right: 7%;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 50px;
+
+        background-color: black;
+        color: white;
+    }
+    @media (min-width: 762px) {
+        height: 600px;
+        .aboutUsLeft{
+            width: 50%;
+        .aboutUsContent{
+            width: 50%;
+        }
+        }
+        #fonda1{
+            position: absolute;
+            width: 120px;
+            left: 35%;
+            top: -50px;
+    
+        }
+        #fonda2{
+            position: absolute;
+            width: 120px;
+            left: 43%;
+            top: 40px;
+    
+        }
+    }
+}
+
+#bookSection{
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button{
+    max-width: 90%;
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: black;
+    color: white;
+    border: 0;
+    letter-spacing: 2px;
+    text-align: center;
+    transition: 0.2s;
+
+    &:hover{
+        transition: 0.5s;
+        border: solid black 2px;
+        color: black !important;
+        background-color: white;
+    }
+}
+
+footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    gap: 50px;
+    @media (min-width: 762px) {
+        flex-direction: row;
+        justify-content: center;
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 300px;
+        h2{
+            font-family: 'Abril Fatface';
+        }
+        img{
+            width: 200px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        .socialMedia{
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            img{
+                width: 50px;
+            }
+        }
+    }
+}
+
+//formulaire
+
+form{
+    display: flex;
+    position: fixed;
+    z-index: 1100 ;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    padding-top: 10px;
+    height: 100vh;
+    margin-top: 100vh;
+    h2{
+        font-family: 'Abril Fatface';
+    }
+    input{
+        width: 70%;
+        border:0;
+        border-bottom: solid black 3px;
+    }
+    .button{
+        width: 200px;
+    }
+    a{
+        color: gray;
+    }
+    .range{
+        width: 100%;
+    }
+    @media (min-width: 762px) {
+        .txt{
+            max-width: 80%;
+        }
+        gap:10px;
+        margin-left: 15%;
+        height: 95vh;
+    }
+}
+
+@keyframes openForm {
+    0% {
+        margin-top: 100vh;
+    }
+    100% {
+        margin-top: 0vh;
+    }
+  }
+
+@keyframes closeForm {
+    0% {
+        margin-top: 0vh;
+    }
+    100% {
+        margin-top: 100vh;
+    }
+
+    
+  }
